@@ -9,8 +9,8 @@ const theme = {
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fontSizes: {
     text: '16px',
+    list: '20px',
     title: '24px',
-    32: '32px',
   },
   fontWeights: {
     normal: '400',

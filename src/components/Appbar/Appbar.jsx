@@ -5,7 +5,7 @@ export const Appbar = () => {
     return (
         <Header>
         <Navigation>
-            <NavItem to={'home'}><HomeIcon size="28" />Home</NavItem>
+            <NavItem to={'/'}><HomeIcon size="28" />Home</NavItem>
             <NavItem to={'movies'}><MoviesIcon size="28" />Movies</NavItem>
         </Navigation>
         </Header>
