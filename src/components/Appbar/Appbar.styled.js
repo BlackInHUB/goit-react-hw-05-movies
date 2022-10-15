@@ -13,6 +13,7 @@ export const Navigation = styled.nav`
 
 export const NavItem = styled(NavLink)`
   text-decoration: none;
+  color: ${p => p.theme.colors.black};
   font-size: ${p => p.theme.fontSizes.title};
   font-weight: ${p => p.theme.fontWeights.bold};
 
