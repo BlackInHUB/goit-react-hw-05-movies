@@ -1,5 +1,11 @@
-import { Box } from 'components/Box';
+import { Outlet } from 'react-router-dom';
+import { Appbar } from 'components/Appbar/Appbar';
 
 export const Layout = () => {
-  return <Box p={4} display="flex"></Box>;
+  return (
+    <>
+      <Appbar />
+      <Outlet />
+    </>
+  );
 };
