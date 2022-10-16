@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export const List = styled.ul`
   list-style: none;
+  margin-top: ${p => p.theme.space[3]}px;
 `;
 
 export const ListItem = styled.li`
@@ -15,6 +16,7 @@ export const ListItem = styled.li`
 `;
 
 export const MovieLink = styled(Link)`
+  margin-left: ${p => p.theme.space[3]}px;
   text-decoration: none;
   color: ${p => p.theme.colors.black};
 `;

@@ -1,23 +1,25 @@
-import {AddTitle, AddLink, AddList, AddListItem, ArrowRightIcon} from './AddInfo.styled'
+import PropTypes from 'prop-types'
+import { AddTitle, AddLink, AddList, AddListItem, ArrowRightIcon } from './AddInfo.styled'
 import { Box } from "components/Box"
-import { useLocation } from 'react-router-dom'
 
-export const AddInfo = () => {
-    const location = useLocation();
-
+export const AddInfo = ({ location }) => {   
     return (
-        <Box p={4} borderBottom="3px solid grey">
+        <Box pb={4} borderBottom="3px solid grey">
             <AddTitle>Additional information</AddTitle>
             <AddList>
                 <AddListItem>
                     <ArrowRightIcon  size="18"/>
-                    <AddLink to={'cast'} state={{from: location}}>Cast</AddLink>
+                    <AddLink to={'cast'} state={{from: location.state.from}}>Cast</AddLink>
                 </AddListItem>
                 <AddListItem>
                     <ArrowRightIcon  size="18"/>
-                    <AddLink to={'reviews'}>Reviews</AddLink>
+                    <AddLink to={'reviews'} state={{ from: location.state.from }}>Reviews</AddLink>
                 </AddListItem>
             </AddList>
         </Box>
     )
+}
+
+AddInfo.propTypes = {
+    location: PropTypes.object.isRequired
 }

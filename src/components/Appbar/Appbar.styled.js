@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 export const Header = styled.header`
   padding: ${p => p.theme.space[5]}px;
   box-shadow: 0px 1px 5px 2px ${p => p.theme.colors.grey};
+  margin-bottom: ${p => p.theme.space[4]}px;
 `;
 
 export const Navigation = styled.nav`

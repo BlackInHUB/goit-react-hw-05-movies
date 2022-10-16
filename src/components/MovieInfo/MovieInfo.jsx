@@ -2,8 +2,8 @@ import PropTypes from 'prop-types'
 import { Box } from "components/Box"
 import { MoviePoster } from "./MovieInfo.styled"
 
-export const MovieInfo = ({ movies }) => {
-    const { title, poster_path, overview, genres, vote_average } = movies;
+export const MovieInfo = ({ movie }) => {
+    const { title, poster_path, overview, genres, vote_average } = movie;
     const movieGenres = [...genres.map(genre => genre.name)].join(', ')
     const userScore = (vote_average * 10).toFixed()
     
@@ -13,7 +13,7 @@ export const MovieInfo = ({ movies }) => {
     }
 
     return (
-        <Box display="flex" mt={4}>
+        <Box display="flex" pb={4} borderBottom="3px solid grey">
             <MoviePoster src={posterSrc} />
             <Box ml={4}>
                 <h1>{title}</h1>
@@ -28,7 +28,7 @@ export const MovieInfo = ({ movies }) => {
 }
 
 MovieInfo.propTypes = {
-    movies: PropTypes.shape({
+    movie: PropTypes.shape({
         title: PropTypes.string.isRequired,
         poster_path: PropTypes.string,
         overview: PropTypes.string.isRequired,
