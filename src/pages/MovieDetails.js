@@ -1,10 +1,11 @@
 import { Box } from 'components/Box';
+import Loader from 'components/Loader/Loader';
 import { MovieCard } from 'components/MovieCard/MovieCard';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { Outlet, useParams } from 'react-router-dom';
 import { getMovieById } from 'services/getMovies';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
 
@@ -19,7 +20,11 @@ export const MovieDetails = () => {
   return (
     <Box>
       <MovieCard data={movie} />
-      <Outlet />
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </Box>
   );
 };
+
+export default MovieDetails;

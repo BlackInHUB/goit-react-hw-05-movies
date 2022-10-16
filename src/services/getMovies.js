@@ -28,7 +28,7 @@ export const getMovieByIdCredits = async id => {
 
   try {
     const response = await axios.get(URL);
-    return response;
+    return response.data.cast;
   } catch (error) {
     console.log(error);
   }
@@ -39,7 +39,7 @@ export const getMovieByIdReviews = async id => {
 
   try {
     const response = await axios.get(URL);
-    return response;
+    return response.data.results;
   } catch (error) {
     console.log(error);
   }

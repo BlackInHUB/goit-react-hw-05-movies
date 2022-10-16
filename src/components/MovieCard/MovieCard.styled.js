@@ -14,8 +14,3 @@ export const GoBackLink = styled(Link)`
 export const ArrowLeftIcon = styled(HiArrowSmLeft)`
   vertical-align: top;
 `;
-
-export const MoviePoster = styled.img`
-  width: 256px;
-  height: auto;
-`;
