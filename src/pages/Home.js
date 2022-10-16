@@ -15,7 +15,7 @@ const Home = () => {
   }
 
   return (
-    <Box p={4} borderBottom="3px solid grey">
+    <Box pl={4} pr={4}>
       <h1>Trending today</h1>
       <MoviesList movies={movies} />
     </Box>

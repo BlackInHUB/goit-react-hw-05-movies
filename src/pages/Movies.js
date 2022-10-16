@@ -33,7 +33,7 @@ const Movies = () => {
   }, [search]);
 
   return (
-    <Box p={4}>
+    <Box pl={4} pr={4}>
       <SearchForm onSubmit={handleSearchSubmit} />
       {movies.length > 0 && <MoviesList movies={movies} />}
     </Box>
